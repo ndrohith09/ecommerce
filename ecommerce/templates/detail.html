@@ -1,0 +1,25 @@
+{% load static %}
+
+<html>
+    <body>
+        <h1>{{product.productname}}</h1>
+        <h2>{{product.productdetails}}</h2>
+        <h3>{{product.productprize}}$</h3>
+        <h4>images/{{product.productimage}}</h4>
+        
+        <img src="{{ product.productimage.url }}">
+        <form method="POST" action="{% url 'search' %}">
+            {% csrf_token %}
+            <input type="text" name="category-name">
+            <input type="submit" value="search">
+        </form>
+        <form method="POST" action="{% url 'addtocart' product.id %}">
+            <input type="submit" value="addtocart">
+        </form>
+        <style>
+            img{
+                max-width: 50px;
+            }
+        </style>
+    </body>
+</html>

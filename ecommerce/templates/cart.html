@@ -1,0 +1,10 @@
+<htlm>
+    <body>
+        <h1>pi{{toal}}</h1>
+        {% for item in cart %}
+        <h1>{{item.productname}}</h1>
+        
+        {% endfor %}
+        <a href="{% url 'checkput' toal %}">chckout</a>
+    </body>
+</htlm>

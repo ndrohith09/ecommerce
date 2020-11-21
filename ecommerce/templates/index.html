@@ -1,0 +1,842 @@
+{% load static %}
+{% static "images" as baserUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Shop ZAP</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Travello template project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+	<link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'styles/main_styles.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'styles/responsive.css' %}">
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Header -->
+
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+								<div class="logo"><a href="index.html"><h1><b><i>Shop ZAP</i></b></h1></a></div>
+								<nav class="main_nav">
+									<ul class="d-flex flex-row align-items-start justify-content-start">
+										<li class="active"><a href="index.html">Home</a></li>				
+										<li><a href="contact.html">About US</a></li>
+										<li><a href="cart.html">Cart</a></li>
+										<!-- {% if user.is_authenticated %}	-->							
+										<li>Hello, {{user.first_name}}</li>
+										 <li><a href="accounts/logout"></a></li> 
+									    <!-- {% else %} -->
+										<li><a href="accounts/register">Register</a></li>
+										<li><a href="ehub/login">Login</a></li>
+										<!-- {% endif%} -->
+									</ul>
+								</nav>
+									<!--<div class="header_phone ml-auto">Edit your HUB</div>  -->
+
+								<!-- Hamburger -->
+
+								<div class="hamburger ml-auto">
+									<i class="fa fa-bars" aria-hidden="true"></i>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header_social d-flex flex-row align-items-center justify-content-start">
+				<ul class="d-flex flex-row align-items-start justify-content-start">
+					<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- Menu -->
+
+		<div class="menu">
+			<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+				<div class="menu_logo"><a href="index.html"><h1><b>Sop ZAP</b></h1></a></div>
+				<div class="menu_close_container ml-auto">
+					<div class="menu_close">
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div class="menu_content">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="My HUB.html">About Us</a></li>
+					<!--<li><a href="#">Services</a></li>
+					<li><a href="Settings.html">News</a></li>-->
+					<li><a href="contact.html">Cart</a></li>
+				</ul>
+			</div>
+			<div class="menu_social">
+				<div class="menu_phone ml-auto">Call us: 18-0011 2211 3800</div>
+				<ul class="d-flex flex-row align-items-start justify-content-start">
+					<li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-snapchat" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Home -->
+
+		<div class="home">
+
+			<!-- Home Slider -->
+			<div class="home_slider_container">
+				<div class="owl-carousel owl-theme home_slider">
+
+					<!-- Slide -->
+					<div class="owl-item">
+						<div class="background_image"
+							style="background-image:url({% static 'images/sale.png' %})"></div>
+						<div class="home_slider_content_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_slider_content">
+											<div class="home_title">
+												<h2> </h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide -->
+					<div class="owl-item">
+						<div class="background_image"
+							style="background-image:url({% static 'images/sale2.jpeg' %})"></div>
+						<div class="home_slider_content_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_slider_content">
+											<div class="home_title">
+												<h2></h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide -->
+					<div class="owl-item">
+						<div class="background_image"
+							style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+						<div class="home_slider_content_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_slider_content">
+											<div class="home_title">
+												<h2>Be ready to ZAP </h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home_page_nav">
+					<ul class="d-flex flex-column align-items-end justify-content-end">
+						<li><a href="#" data-scroll-to="#destinations">Festive Offers<span></span></a></li>
+						<li><a href="#" data-scroll-to="#testimonials">Testimonials<span></span></a></li>
+						<li><a href="#" data-scroll-to="#news">Deals of the Day<span></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Search -->
+
+		<div class="home_search">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_search_container">
+							<div class="home_search_title">Find Your ZAP</div>
+							<div class="home_search_content">
+								<form method='POST' action="{% url 'search' %}" class="home_search_form" id="home_search_form">
+									<div
+										class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+										<input type="text" class="search_input search_input_1" placeholder="Search"
+											required="required" name='category-name'>
+										<input type="submit" class="home_search_button" value="GET">
+										<!--<input type="text" class="search_input search_input_4" placeholder="Budget"
+											required="required">
+										<button class="home_search_button">GET</button>-->
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Intro -->
+
+		<div class="intro">
+			<div class="intro_background" style="background-image:url({% static 'images/intro.png' %})"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="intro_container">
+							<div class="row">
+
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/home.png' %}" alt=""></div>
+										<div class="intro_content">
+											<div class="intro_title">Home Essentials</div>
+											<div class="intro_subtitle">
+												<p>At Home in Style</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/electronics.png' %}" alt="">
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">Electronics</div>
+											<div class="intro_subtitle">
+												<p>50% Discount for all </p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/stationary.png' %}" alt="">
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">Books</div>
+											<div class="intro_subtitle">
+												<p>20% Discount for all </p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/fashion.png' %}" alt="">
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">Fashion</div>
+											<div class="intro_subtitle">
+												<p>Grab Your Fashion</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/furniture.png' %}" alt="">
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">Furniture</div>
+											<div class="intro_subtitle">
+												<p>Cosy Lifestyle</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/beauty.png' %}" alt="">
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">Beauty Products</div>
+											<div class="intro_subtitle">
+												<p>10% off</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/baby.png' %}" alt="">
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">Baby Products</div>
+											<div class="intro_subtitle">
+												<p>Keep your babies safe</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/pets.png' %}" alt="">
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">Pet Acessories</div>
+											<div class="intro_subtitle">
+												<p>70% Flat sale</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Intro Item -->
+								<div class="col-lg-4 intro_col">
+									<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+										<div class="intro_icon"><img src="{% static 'images/gift.png' %}" alt="">
+										</div>
+										<div class="intro_content">
+											<div class="intro_title">Gifts</div>
+											<div class="intro_subtitle">
+												<p>Something Special for your loved ones</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Destinations -->
+
+		<div class="destinations" id="destinations">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<div class="section_subtitle"></div>
+						<div class="section_title">
+							<h2>Special offers!!!</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row destinations_row">
+					<div class="col">
+						<div class="destinations_container item_grid">
+
+                  {% for dest in dests %} 
+							 <!--Destination -->
+							<div class="destination item">
+								<div class="destination_image">
+                           <img src="{{ dest.productimage.url }}"> 
+                           
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="destinations.html">{{dest.productname}}</a></div>
+									<div class="destination_subtitle">
+										<p>{{dest.productdetails}}</p>
+									</div>
+									<div class="destination_price"><h1>₹{{dest.productprize}}</h1>
+										
+										<a href="{% url 'addtocart' dest.id %}" >Add to cart</a>
+									</div>
+								</div>
+                     </div>
+                   {% endfor%} 
+
+							 <!--Destination -->
+						<!--<div class="destination item">
+								<div class="destination_image">
+									<img src="{% static 'images/destination_2.jpg' %}" alt="">
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="destinations.html">{{dest1.name}}</a></div>
+									<div class="destination_subtitle">
+										<p>Nulla pretium tincidunt felis, nec.{{dest1.desc}}</p>
+									</div>
+									<div class="destination_price">From ${{dest1.price}} </div>
+								</div>
+							</div> 
+
+							
+							<div class="destination item">
+								<div class="destination_image">
+									<img src="{% static 'images/destination_3.jpg' %}" alt="">
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="destinations.html">{{dest2.name}}</a></div>
+									<div class="destination_subtitle">
+										<p>{{dest2.desc}}</p>
+									</div>
+									<div class="destination_price">From {{dest2.price}} rs</div>
+								</div>
+							</div> 
+
+							
+							<div class="destination item">
+								<div class="destination_image">
+									<img src="{% static 'images/destination_1.jpg' %}" alt="">
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="destinations.html">{{desc3.name}}</a></div>
+									<div class="destination_subtitle">
+										<p>{{dest3.desc}}</p>
+									</div>
+									<div class="destination_price">From ${{dest3.price}}</div>
+								</div>
+							</div>-->
+
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Testimonials -->
+
+		<div class="testimonials" id="testimonials">
+			<div class="parallax_background parallax-window" data-parallax="scroll"
+				data-image-src="{% static 'images/testimonials.jpg' %}" data-speed="0.8"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<div class="section_subtitle">simply amazing</div>
+						<div class="section_title">
+							<h2>Testimonials</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row testimonials_row">
+					<div class="col">
+
+						<!-- Testimonials Slider -->
+						<div class="testimonials_slider_container">
+							<div class="owl-carousel owl-theme testimonials_slider">
+
+								<!-- Slide -->
+								<div class="owl-item text-center">
+									<div class="testimonial">I love this app. It’s the best choice for Shopify. The features are five star and the customer service is top notch !!!!!										Helpful</div>
+									<div class="testimonial_author">
+										<div
+											class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+											<div>Elon Musk,</div>
+											<div>CEO of Tesla</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide -->
+								<div class="owl-item text-center">
+									<div class="testimonial">You have to Dream before your Dream comes true</div>
+									<div class="testimonial_author">
+										<div
+											class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+											<div>Avul Pakir Jainulabdeen Abdul Kalam</div>
+											<div></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide -->
+								<div class="owl-item text-center">
+									<div class="testimonial">This app is AMAZING! There is a lot of customization available for your reviews and testimonials, as well as giving your website a professional look. In addition, the customer service support is the best support I have dealt with yet. Strongly recommend this Ecommerce website for you.</div>
+									<div class="testimonial_author">
+										<div
+											class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+											<div>Vincet Cerf</div>
+											<div></div>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- Slide -->
+								<div class="owl-item text-center">
+									<div class="testimonial">We've used this app for 4 years now, and just recently we had a bit of a hiccup with it, but ShopZap was really responsive with a solution!</div>
+									<div class="testimonial_author">
+										<div
+											class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+											<div>Zuckerberg</div>
+											<div>CEO of facebook</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="test_nav">
+				<ul class="d-flex flex-column align-items-end justify-content-end">
+					<li><a href="#">Amazing<span></span></a></li>
+					<li><a href="#">Impressive<span></span></a></li>
+					<li><a href="#">Enormous<span></span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- News -->
+
+		<div class="news" id="news">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-8">
+						<div class="news_container">
+
+							<!-- News Post -->
+							<div
+								class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+								<div class="news_post_image"><img src="{% static 'images/mobile1.png' %}" alt=""></div>
+								<div class="news_post_content">
+									<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+										<div>20% </div>
+										<div>Discount</div>
+									</div>
+									<div class="news_post_title"><a href="#">G9 Pro Mobile</a></div>
+									<div class="news_post_category">
+										<ul>
+											<li><a href="#">Electronics</a></li>
+										</ul>
+									</div>
+									<div class="news_post_text">
+										<p>M.R.P:₹14000<br>
+											Deal Price: ₹11,999<br> 
+											Save extra with No Cost EMI
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- News Post -->
+							<div
+								class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+								<div class="news_post_image"><img src="{% static 'images/tv.png' %}" alt=""></div>
+								<div class="news_post_content">
+									<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+										<div>10%</div>
+										<div>june</div>
+									</div>
+									<div class="news_post_title"><a href="#">G-Plus Tv</a></div>
+									<div class="news_post_category">
+										<ul>
+											<li><a href="#">Television</a></li>
+										</ul>
+									</div>
+									<div class="news_post_text">
+										<p>M.R.P:₹90000<br>
+											Deal Price: ₹59,999<br> 
+											Save extra with No Cost EMI</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- News Post -->
+							<div
+								class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+								<div class="news_post_image"><img src="{% static 'images/dress.png' %}" alt=""></div>
+								<div class="news_post_content">
+									<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+										<div>40%</div>
+										<div>Discount</div>
+									</div>
+									<div class="news_post_title"><a href="#">Suit</a></div>
+									<div class="news_post_category">
+										<ul>
+											<li><a href="#">Lifestyle & Fashion</a></li>
+										</ul>
+									</div>
+									<div class="news_post_text">
+										<p>M.R.P:₹5999<br>
+											Deal Price: ₹3499<br> 
+											Save extra with No Cost EMI</p>
+									</div>
+								</div>
+							</div>
+							<div
+							class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+							<div class="news_post_image"><img src="{% static 'images/shoe.png' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>25%</div>
+									<div>Discount</div>
+								</div>
+								<div class="news_post_title"><a href="#">Shoes</a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="#">Lifestyle & Fashion</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>M.R.P:₹999<br>
+										Deal Price: ₹349<br> 
+										Save extra with No Cost EMI</p>
+								</div>
+							</div>
+						</div>
+
+
+							<div
+								class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+								<div class="news_post_image"><img src="{% static 'images/pillow.png' %}" alt=""></div>
+								<div class="news_post_content">
+									<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+										<div>5%</div>
+										<div>Discount</div>
+									</div>
+									<div class="news_post_title"><a href="#">Pillow</a></div>
+									<div class="news_post_category">
+										<ul>
+											<li><a href="#">Home Essentials</a></li>
+										</ul>
+									</div>
+									<div class="news_post_text">
+										<p>M.R.P:₹900<br>
+											Deal Price: ₹300<br> 
+											Save extra with No Cost EMI</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- News Sidebar -->
+					<div class="col-xl-4">
+						<div class="travello">
+							<div class="background_image"
+								style="background-image:url({% static 'images/sale.png' %})"></div>
+							<div class="travello_content">
+								<div class="travello_content_inner">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="travello_container">
+								<a href="#">
+									<div class="d-flex flex-column align-items-center justify-content-end">
+										<span class="travello_title">Get a 40% Discount</span>
+										<span class="travello_subtitle">Buy Your Products Now</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- News Sidebar -->
+					<div class="col-xl-4">
+						<div class="travello">
+							<div class="background_image"
+								style="background-image:url({% static 'images/1.png' %})"></div>
+							<div class="travello_content">
+								<div class="travello_content_inner">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="travello_container">
+								<a href="#">
+									<div class="d-flex flex-column align-items-center justify-content-end">
+										<span class="travello_title">Get a 20% Discount</span>
+										<span class="travello_subtitle"></span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- News Sidebar -->
+					<div class="col-xl-4">
+						<div class="travello">
+							<div class="background_image"
+								style="background-image:url({% static 'images/2.png' %})"></div>
+							<div class="travello_content">
+								<div class="travello_content_inner">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="travello_container">
+								<a href="#">
+									<div class="d-flex flex-column align-items-center justify-content-end">
+										<span class="travello_title">Get a 50% Discount</span>
+										<span class="travello_subtitle">Buy Your Now</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- News Sidebar -->
+					<div class="col-xl-4">
+						<div class="travello">
+							<div class="background_image"
+								style="background-image:url({% static 'images/sale1.jpeg' %})"></div>
+							<div class="travello_content">
+								<div class="travello_content_inner">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="travello_container">
+								<a href="#">
+									<div class="d-flex flex-column align-items-center justify-content-end">
+										<span class="travello_title">Get a 20% Discount</span>
+										<span class="travello_subtitle"></span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="parallax_background parallax-window" data-parallax="scroll"
+				data-image-src="{% static 'images/footer_1.jpg' %}" data-speed="0.8"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="newsletter">
+							<div class="newsletter_title_container text-center">
+								<div class="newsletter_title">Have Fun in Shopping with Shop ZAP</div>
+								<div class="newsletter_subtitle">Invite your Friends NOW!</div>
+							</div>
+							<div class="newsletter_form_container">
+								<form action="#"
+									class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between"
+									id="newsletter_form">
+									<div
+										class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+										<div><input type="text" class="newsletter_input newsletter_input_name"
+												id="newsletter_input_name" placeholder="Name" required="required">
+											<div class="input_border"></div>
+										</div>
+										<div><input type="email" class="newsletter_input newsletter_input_email"
+												id="newsletter_input_email" placeholder="Email ID"
+												required="required">
+											<div class="input_border"></div>
+										</div>
+									</div>
+									<div><button class="newsletter_button">Invite</button></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row footer_contact_row">
+					<div class="col-xl-10 offset-xl-1">
+						<div class="row">
+
+							<!-- Footer Contact Item -->
+							<div class="col-xl-4 footer_contact_col">
+								<div
+									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+									<div class="footer_contact_icon"><img src="{% static 'images/sign.svg' %}" alt="">
+									</div>
+									<div class="footer_contact_title">Contact Us</div>
+									<div class="footer_contact_list">
+										<ul>
+											<li>Office Landline: +44 1234 56 789 012</li>
+											<li>CUSTOMER CARE - 18 0011 2211 3800</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Footer Contact Item -->
+							<div class="col-xl-4 footer_contact_col">
+								<div
+									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+									<div class="footer_contact_icon"><img src="{% static 'images/trekking.svg' %}"
+											alt=""></div>
+									<div class="footer_contact_title">Location</div>
+									<div class="footer_contact_list">
+										<ul style="max-width:190px">
+											<li> 18 Vega Street,Garuda,FL 600125</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Footer Contact Item -->
+							<div class="col-xl-4 footer_contact_col">
+								<div
+									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+									<div class="footer_contact_icon"><img src="{% static 'images/around.svg' %}" alt="">
+									</div>
+									<div class="footer_contact_title">send me a message</div>
+									<div class="footer_contact_list">
+										<ul>
+											<li>ShopZap@gmail.com</li>
+											<li>ShopZap.customercare@.gmail.com</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col text-center">
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;
+				<script>document.write(new Date().getFullYear());</script> All rights reserved | This WEBPAGE is made
+				with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+					target="_blank">ShopZAP</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			</div>
+		</footer>
+	</div>
+
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+	<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+	<script src="{% static 'plugins/Isotope/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+	<script src="{% static 'plugins/easing/easing.js' %}"></script>
+	<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>
