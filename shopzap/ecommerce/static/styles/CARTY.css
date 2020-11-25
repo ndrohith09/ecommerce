@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: lightblue;
+   
+}
+.product img{
+    width: 380px;
+    height: 300px;
+    margin-left: 15px;
+    margin-top: 600px;
+    margin-bottom: 7px;
+    border-radius: 15px;
+    
+  
+}
+.container{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 0px 30px 15px;
+    
+}
+.product{
+    display:inline-flex;
+    align-items: flex-end;
+    width: 40%;
+    height: 100%;
+    background:white;    
+    background: linear-gradient(160deg,#e1eec3,#0cebeb);
+    background: linear-gradient(360deg,#E100FF,#5B86E5);
+    background: white;
+
+}
+.product h2{
+    padding: 0;
+    margin-left: 60px;
+    font-family: ' sans-serif';
+    color: black;
+    background: white;
+    border-radius: 5px;
+    border-width: 60px;
+
+}
+.bill {
+    background: white;
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(160deg,#e1eec3,#f05053);
+    background: white;
+   
+}
+.bill h2{
+    font-size:34px ;
+    font-weight: bold;
+    margin-left: 90px;
+    margin-bottom: 10px;
+    color:black;
+   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.bill h3{
+    font-size: 28px;
+    font-weight:normal;
+    margin-left: 30;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.price{
+    background-color: yellow;
+    color: black;
+    
+    padding: 10px 30px 20px 60px;
+    left: 40px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.product h2{
+    color: white;
+    font-weight: 400px;
+    font-size: 40px;
+    left: 40px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type:none;
+}
+li{
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: cursive;
+    justify-content: space-between;
+    line-height: 2;
+    color:#3A1C71;
+}
+.li:nth-child(5){
+    color: red;
+}
+.hr{
+    border-color: black;
+    border-style: solid;
+}
+.payment-form  input,select{
+
+background: linear-gradient(180deg,#f2fcfe,#5B86E5);
+background: white;
+padding: 2% 10px;
+width: 32%;
+margin-left: 2px;
+border-radius: 5px;
+margin-bottom: 5px;
+border-color: black;
+}
+.payment-form .form-input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;  
+    border-color: black;
+}
+.payment-form button{
+    width: 60%;
+    margin-left: 135px;
+    margin-top: 20px;
+    background-color: chocolate;
+    background-color: black;
+    color: white;
+    padding: 2% 0;
+    font-size: 20px;
+    border-radius: 9px;
+    cursor: pointer;
+}

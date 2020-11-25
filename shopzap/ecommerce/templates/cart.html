@@ -1,0 +1,137 @@
+<!--<html>
+    <body>
+        <h1>pi{{toal}}</h1>
+        {% for item in cart %}
+        <h1>{{item.productname}}</h1>
+        
+        {% endfor %}
+        <a href="{% url 'checkput' toal %}">chckout</a>
+    </body>
+</html> -->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Cart</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/CARTY.css' %}">
+</head>
+<body>
+    <nav id="wrapper">
+        <div class="container">
+            <div class="product">
+                
+                <div>
+                    <img src="{% static 'images/carty.png' %}">
+                    <h2></h2>
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="bill">
+                <h2>Receipt Summary</h2>
+                <hr>
+                <ul>
+                   <!-- <li>
+                        <span>250 X 1 item</span>
+                        <span>250$</span>
+                    </li>
+                    <li>
+                        <span>Discount</span>
+                        <span>50$</span>
+                    </li>
+                    <li>
+                        <span>Subtotal</span>
+                        <span>$200</span>
+                    </li>
+                    <li>
+                        <span>Tax</span>
+                        <span>20$</span>
+                    </li>
+                    <hr>
+                    <li>
+                        <span>Total</span>
+                        <span>205$</span>
+                    </li>-->
+
+                
+                {% for i in cart %}
+                    <li>
+                        <span>{{i.productname}} </span>
+                        <span>{{i.productprize}}$</span>
+                    </li>
+                    {% endfor %}
+                    <hr>
+                    <li>
+                        <span>Total</span>
+                        <span>{{toal}}$</span>
+                    </li>
+                </ul>
+                <hr>
+                <h3>Payment Information</h3>
+                <form action="/" class="payment-form">
+                    <!-- <div class="form-input">
+                        <input type="text" placeholder="Card Number" style =" width:100%">
+                    </div>
+                    <div class="="form-input>
+                        <select>
+                            <option>Month</option>                               
+                        </select>
+                        <select>
+                            <option>Year</option>                               
+                        </select>
+                        <input type="text" placeholder="CVV" />
+                    </div>
+                    <button type ="submit" href="#"> BUY NOW</button> -->
+                    <div id="paypal-button-container"></div>
+                </form>
+             </div>
+        </div>
+    </nav>
+    <script src="https://www.paypal.com/sdk/js?client-id=Ac7foF2UtC6Rk75JZE_cDujSonqTurUqiLvaCJx2PrMnzNDhtKDW4Bh5se7PbvJGsdV-fpt-73262FOs&currency=INR"></script>
+
+    <script>
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '{{toal}}'
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+
+
+</body>
+</html>
+
+        
+        <!--<div class="cart">
+            <ul>
+                <li>Shop</li>
+                <li>Contact</li>
+            </ul>
+            <h1> Shopping Cart</h1>
+            <p>Your products are ready to checkout</p>            
+        </div>
+        <div class="box-1">-->
+
+
+
+        
+
+
+
