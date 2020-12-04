@@ -27,6 +27,7 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('check/<toal>',views.checkout,name='checkput'),
     path('about/',views.about,name="about"),
+    path('productpage/',views.productpage,name="productpage"),
     
 ]
 

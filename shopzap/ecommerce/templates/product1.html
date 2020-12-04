@@ -1,0 +1,131 @@
+{%  load static %}
+<!DOCTYPE html>
+<html>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+        background:white;
+    }
+    nav{
+        background:black;
+        width: 100%;
+        overflow: auto;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li{
+        float: left;
+    }
+    nav a{
+        width:120px;
+        display: list-item;
+        text-decoration: none;
+        text-align: center;
+        background: black;
+        font-size: 17px;
+        color: white;;
+        padding: 20px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    nav a:hover{
+        background: skyblue;
+        color: black;
+    }
+    .container{
+        max-width: 1000px;
+        background: white;
+        overflow: hidden;
+        margin-left: 30px;
+        padding-left: 60px;
+        padding-top: 5px;
+        display: inline-flex;
+        justify-content:right ;
+       
+    }
+    .gallery{
+        margin-top:5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        display:inline-flexbox;
+        
+        width:390px;
+    }
+    .gallery img{
+        width: 100%;
+        height:auto;
+        display: flexbox;
+    }
+    .name{
+        padding-left: 155px ;
+        font-size: 25px;
+        font-family: cursive;
+    }
+    .desc{
+        padding: 15px;
+        text-align: center;  
+
+    }
+    .price{
+        padding: 15px;
+        font-size:20px;
+        text-align: center;  
+    }
+    footer{
+        padding: 10px;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        background: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+        height: 60px;
+    }
+    
+    
+
+</style>
+    <head>
+        <title>product page</title>
+         <meta name="viewreport" content="width=device-width ,initial-scale=1">
+</head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href ="https://www.flipkart.com/">Electronics</a></li>
+                <li><a href ="#">Accessories</a></li>
+                <li><a href ="#">Bags</a></li>
+                <li><a href ="#">Shoes</a></li>
+                <li><a href ="#">Gifts</a></li>
+                <li><a href ="#">Toys</a></li>
+                <li><a href ="#">Furniture</a></li>
+                <li><a href ="#">Beauty</a></li>
+                <li><a href ="#">Fashion</a></li>
+                <li><a href ="#">Jewel</a></li>
+                <li><a href ="#">Household</a></li>                
+                <li><a href ="#">Hardware</a></li>
+            </ul>
+        </nav>
+        {% for dest in products %} 
+        <div class="container">
+            <div class="gallery">
+                <img src="{{ dest.productimage.url }}">
+                <div class="name">{{dest.productname}}</div>
+                <div class="price">₹{{dest.productprize}}</div>
+                <div class="desc">{{dest.productdetails}}</div>                
+            </div>         
+        </div>
+        {% endfor %}
+        
+
+    <footer>Shop ZAP
+    </footer>
+    </body>
+</html>

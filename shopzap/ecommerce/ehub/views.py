@@ -1,9 +1,12 @@
 from django.shortcuts import render,redirect
-from .models import Product,productpage
+from .models import Product,fashion,test
 from django.views.decorators.csrf import csrf_exempt
 cart=[]
 total=0
 from django.http import HttpResponse
+
+def productpage(request):
+    return render(request,'productpage.html')
 
 def home(request):
     dests=Product.objects.all()
@@ -12,13 +15,21 @@ def home(request):
 def search(request):
     if request.method=='POST':
         category=request.POST.get('category-name')
-        queryset=productpage.objects.all()
+        queryset=fashion.objects.filter(productcategory = category)
         if len(queryset)>0:
             return render(request,'product.html',context={'products': queryset})
         else:
             queryset=Product.objects.all()
             return render(request,'product.html',context={'products': queryset})
-    
+def test(request):   
+    if request.method=='POST':
+        category=request.POST.get('category-name')
+        queryset=test.objects.filter(productcategory = category)
+        if len(queryset)>0:
+            return render(request,'product.html',context={'products': queryset})
+        else:
+            queryset=Product.objects.all()
+            return render(request,'product.html',context={'products': queryset})
 
 @csrf_exempt
 def detail(request,pk):

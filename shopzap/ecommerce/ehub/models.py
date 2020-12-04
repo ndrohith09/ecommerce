@@ -14,11 +14,16 @@ class Product(models.Model):
     def __str__(self):
         return self.productname
 
-class productpage(models.Model):
+class fashion(models.Model):
     productname=models.CharField(max_length=300)
     productdetails=models.TextField()
     productprize=models.FloatField()
     productimage=models.ImageField(null=True)
     productcategory=models.CharField(max_length=30,null=True,blank=True)
-   
-   
+class test(models.Model):
+    productname=models.CharField(max_length=300)
+    productdetails=models.TextField()
+    productprize=models.FloatField()
+    productimage=models.ImageField(null=True)
+    productcategory=models.CharField(max_length=30,null=True,blank=True)
+
