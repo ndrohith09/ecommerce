@@ -36,12 +36,13 @@
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-								<div class="logo"><a href="index.html"><h1><b><i>Shop ZAP</i></b></h1></a></div>
+								<div class="logo"><a href="{% url 'home' %}"><h1><b><i style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight: bolder; font-size: 76px;color: black;">Shop ZAP</i></b></h1></a></div>
 								<nav class="main_nav">
 									<ul class="d-flex flex-row align-items-start justify-content-start">
-										<li class="active"><a href="index.html">Home</a></li>				
-										<li><a href="{% url 'about' %}">About US</a></li>
-										<li><a href="{% url 'cart' %}">Cart</a></li>
+										<li><a style="font-size: 28px;"  href="{% url 'home' %}">Home</a></li>	
+										<li><a style="font-size: 28px;"  href="{% url 'productpage' %}">More Products</a></li>			
+										<li><a style="font-size: 28px;"  href="{% url 'about' %}">About US</a></li>
+										<li><a style="font-size: 28px;"  href="{% url 'cart' %}">Cart</a></li>
 										<!-- {% if user.is_authenticated %}							
 										<li>Hello, {{user.first_name}}</li>
 										 <li><a href="accounts/logout"></a></li> 
@@ -90,8 +91,8 @@
 			</div>
 			<div class="menu_content">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About Us</a></li>
+					<li><a href="{% url 'productpage' %}">Home</a></li>
+					<li><a href="{% url 'about' %}">About Us</a></li>
 					<!--<li><a href="#">Services</a></li>
 					<li><a href="Settings.html">News</a></li>-->
 					<li><a href="{% url 'cart' %}">Cart</a></li>
