@@ -6,7 +6,20 @@ total=0
 from django.http import HttpResponse
 
 def productpage(request):
-    return render(request,'productpage.html')
+    mobiles=Product.objects.filter(productcategory='mobiles')
+    fashion=Product.objects.filter(productcategory='fashion')
+    household=Product.objects.filter(productcategory='household')
+    sports=Product.objects.filter(productcategory='sports')
+    accessories=Product.objects.filter(productcategory='accessories')
+    gifts=Product.objects.filter(productcategory='gifts')
+    hardware=Product.objects.filter(productcategory='hardware')
+    beauty=Product.objects.filter(productcategory='beauty')
+    decorative=Product.objects.filter(productcategory='decorative')
+    stationary=Product.objects.filter(productcategory='sationary')
+    context={'mobiles':mobiles,'fashion':fashion,'household':household,'sports':sports,'accessories':accessories,
+            'gifts':gifts,'hardware':hardware,'beauty':beauty,'decorative':decorative,'stationary':stationary}
+    return render(request,'productpage.html',context)
+    #return render(request,'productpage.html')
 
 def home(request):
     dests=Product.objects.all()
