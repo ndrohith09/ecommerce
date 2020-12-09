@@ -71,7 +71,7 @@
                         <span>{{i.productname}} </span>
                         <span>₹ {{i.productprize}}  </a></span></i></i> 
                         
-                        <i class="fa fa-trash" aria-hidden="true"> <a href="#">Remove</a></i>                 
+                        <i class="fa fa-trash" aria-hidden="true"> <a href="{% url 'remove' i.id %}">Remove</a></i>                 
                     
                         
                     </li>
