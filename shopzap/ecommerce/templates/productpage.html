@@ -353,10 +353,10 @@ font-family: 'Texturina', serif;
             </a>
             <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                 <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
+                {% for i in mobiles %}
+                    <a class="dropdown-item"> {{i.productname}}</a>
+                    <div class="dropdown-divider"></div>
+                {% endfor %}
             <!-- </ul> for horizontal -->
             </div>
 
@@ -367,10 +367,10 @@ font-family: 'Texturina', serif;
                 </a>
                 <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                     <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
+                  {% for i in fashion %}
+                        <a class="dropdown-item"> {{i.productname}}</a>
+                        <div class="dropdown-divider"></div>
+                   {% endfor %}
                 <!-- </ul> for horizontal -->
                 </div>
           </li>
@@ -381,10 +381,10 @@ font-family: 'Texturina', serif;
             </a>
             <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                 <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
+                  {% for i in household%}
+                    <a class="dropdown-item"> {{i.productname}}</a>
+                    <div class="dropdown-divider"></div>
+                   {% endfor %}
             <!-- </ul> for horizontal -->
             </div>
             </li>
@@ -395,10 +395,10 @@ font-family: 'Texturina', serif;
                 </a>
                 <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                     <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
+                    {% for i in sports %}
+                        <a class="dropdown-item"> {{i.productname}}</a>
+                        <div class="dropdown-divider"></div>
+                    {% endfor %}
                 <!-- </ul> for horizontal -->
                 </div>
             </li>
@@ -409,10 +409,10 @@ font-family: 'Texturina', serif;
                 </a>
                 <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                     <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
+                    {% for i in accessories %}
+                        <a class="dropdown-item"> {{i.productname}}</a>
+                        <div class="dropdown-divider"></div>
+                        {% endfor %}
                 <!-- </ul> for horizontal -->
                 </div>
                 </li>
@@ -423,10 +423,10 @@ font-family: 'Texturina', serif;
             </a>
             <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                 <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
+                {% for i in gifts %}
+                    <a class="dropdown-item"> {{i.productname}}</a>
+                    <div class="dropdown-divider"></div>
+                 {% endfor %}
             <!-- </ul> for horizontal -->
             </div>
             </li>
@@ -437,10 +437,10 @@ font-family: 'Texturina', serif;
             </a>
             <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                 <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
+               {% for i in hardware %}
+                    <a class="dropdown-item"> {{i.productname}}</a>
+                    <div class="dropdown-divider"></div>
+               {% endfor %}
             <!-- </ul> for horizontal -->
             </div>
             </li>
@@ -451,10 +451,10 @@ font-family: 'Texturina', serif;
                 </a>
                 <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                     <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
+                  {% for i in beauty %}
+                        <a class="dropdown-item"> {{i.productname}}</a>
+                        <div class="dropdown-divider"></div>
+                  {% endfor %}
                 <!-- </ul> for horizontal -->
                 </div>
                 </li>
@@ -466,10 +466,10 @@ font-family: 'Texturina', serif;
             </a>
             <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                 <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
+                {% for i in decorative %}
+                    <a class="dropdown-item"> {{i.productname}}</a>
+                    <div class="dropdown-divider"></div>
+                 {% endfor %}
             <!-- </ul> for horizontal -->
             </div>
             </li>
@@ -480,16 +480,16 @@ font-family: 'Texturina', serif;
                 </a>
                 <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                     <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
+                    {% for i in stationary %}
+                        <a class="dropdown-item"> {{i.productname}}</a>
+                        <div class="dropdown-divider"></div>
+                     {% endfor %}
                 <!-- </ul> for horizontal -->
                 </div>
                 </li>
         </ul>
         <span class="navbar-text">
-        <a href="#"> CART <i class="fas fa-shopping-cart"></i></a>        
+        <a href="{% url 'cart' %}"> CART <i class="fas fa-shopping-cart"></i></a>        
         </span>
     </div>
     </div>
