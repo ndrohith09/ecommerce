@@ -335,162 +335,166 @@ font-family: 'Texturina', serif;
     <body>
 
         <!--navbar-->
-    <nav class="navbar py-1 navbar-expand-md bg-primary navbar-dark sticky-top ">
+<nav class="navbar py-1 navbar-expand-md bg-primary navbar-dark sticky-top ">
 
        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
         <span class= "navbar-toggler-icon"></span>
        </button >
 
        <div class=" collapse navbar-collapse" id="collapse_target">
-       
-        <a class="navbar-brand" href="#">
-            <img src="{% static 'images/logo.PNG' %}" alt="logo" style="width: 120px; height: 50px;">
+       <!--logo -->
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.PNG' %}" alt="logo" style="width: 120px; height: 30px;">
         </a>
         <ul class="navbar-nav ">
           <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                Mobiles
+            <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                Mobiles <i class="fa fa-mobile" aria-hidden="true"></i>
                 <span class="caret"></span>
             </a>
             <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                 <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
+              {% for i in mobiles %}
+                    <a class="dropdown-item"> {{i.productname}}</a>
+                    <div class="dropdown-divider"></div>
+               {% endfor %}
             <!-- </ul> for horizontal -->
             </div>
 
             <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                    Fashion
+                <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                    Fashion <i class="fas fa-tshirt"></i>
+                    
                     <span class="caret"></span>
                 </a>
                 <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                     <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
+                  {% for i in fashion %}
+                        <a class="dropdown-item"> {{i.productname}}</a>
+                        <div class="dropdown-divider"></div>
+                   {% endfor %}
                 <!-- </ul> for horizontal -->
-                </div>
-          </li>
-          <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                HouseHold
-                <span class="caret"></span>
-            </a>
-            <div class ="dropdown-menu" aria-labelledby="dropdown-target">
-                <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
-            <!-- </ul> for horizontal -->
-            </div>
-            </li>
-            <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                    Sports
-                    <span class="caret"></span>
-                </a>
-                <div class ="dropdown-menu" aria-labelledby="dropdown-target">
-                    <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
-                <!-- </ul> for horizontal -->
-                </div>
-            </li>
-            <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                   Accessories
-                    <span class="caret"></span>
-                </a>
-                <div class ="dropdown-menu" aria-labelledby="dropdown-target">
-                    <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
-                <!-- </ul> for horizontal -->
-                </div>
-                </li>
-            <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                Gifts
-                <span class="caret"></span>
-            </a>
-            <div class ="dropdown-menu" aria-labelledby="dropdown-target">
-                <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
-            <!-- </ul> for horizontal -->
-            </div>
-            </li>
-            <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                Hardware
-                <span class="caret"></span>
-            </a>
-            <div class ="dropdown-menu" aria-labelledby="dropdown-target">
-                <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
-            <!-- </ul> for horizontal -->
-            </div>
-            </li>
-            <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                    Beauty
-                    <span class="caret"></span>
-                </a>
-                <div class ="dropdown-menu" aria-labelledby="dropdown-target">
-                    <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
-                <!-- </ul> for horizontal -->
-                </div>
-                </li>
+                </div>           
             
-         <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                Decorative
+          <li class="nav-item active dropdown">
+            <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                Electronics <i class="fas fa-tv"></i>
+               
                 <span class="caret"></span>
             </a>
             <div class ="dropdown-menu" aria-labelledby="dropdown-target">
                 <!-- <ul class="navbar-nav"> -->
-                <a class="dropdown-item"> 1</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item"> 1</a>
-                <a class="dropdown-item"> 1</a>
+              {% for i in electronics %}
+                    <a class="dropdown-item"> {{i.productname}}</a>
+                    <div class="dropdown-divider"></div>
+               {% endfor %}
+            <!-- </ul> for horizontal -->
+            </div>
+      </li>
+          <li class="nav-item active dropdown">
+            <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                HouseHold <i class="fas fa-home"></i>
+                <span class="caret"></span>
+            </a>
+            <div class ="dropdown-menu" aria-labelledby="dropdown-target">
+                <!-- <ul class="navbar-nav"> -->
+                  {% for i in household%}
+                    <a class="dropdown-item"> {{i.productname}}</a>
+                    <div class="dropdown-divider"></div>
+                   {% endfor %}
             <!-- </ul> for horizontal -->
             </div>
             </li>
-            <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
-                    Stationary
-                    <span class="caret"></span>
-                </a>
-                <div class ="dropdown-menu" aria-labelledby="dropdown-target">
-                    <!-- <ul class="navbar-nav"> -->
-                    <a class="dropdown-item"> 1</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"> 1</a>
-                    <a class="dropdown-item"> 1</a>
-                <!-- </ul> for horizontal -->
-                </div>
-                </li>
+            <ul class="navbar-nav ">
+                <li class="nav-item active dropdown">
+                    <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                      Sports<i class="far fa-futbol"></i>
+                      <span class="caret"></span>
+                  </a>
+                  <div class ="dropdown-menu" aria-labelledby="dropdown-target">
+                      <!-- <ul class="navbar-nav"> -->
+                    {% for i in sports %}
+                          <a class="dropdown-item"> {{i.productname}}</a>
+                          <div class="dropdown-divider"></div>
+                     {% endfor %}
+                  <!-- </ul> for horizontal -->
+                  </div>
+      
+                  <li class="nav-item active dropdown">
+                    <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                          Accessories <i class="fas fa-wrench"></i>
+                          <span class="caret"></span>
+                      </a>
+                      <div class ="dropdown-menu" aria-labelledby="dropdown-target">
+                          <!-- <ul class="navbar-nav"> -->
+                        {% for i in accessories %}
+                              <a class="dropdown-item"> {{i.productname}}</a>
+                              <div class="dropdown-divider"></div>
+                         {% endfor %}
+                      <!-- </ul> for horizontal -->
+                      </div>           
+                  
+                <li class="nav-item active dropdown">
+                    <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                      Gifts <i class="fas fa-gift"></i>
+                      <span class="caret"></span>
+                  </a>
+                  <div class ="dropdown-menu" aria-labelledby="dropdown-target">
+                      <!-- <ul class="navbar-nav"> -->
+                    {% for i in gifts %}
+                          <a class="dropdown-item"> {{i.productname}}</a>
+                          <div class="dropdown-divider"></div>
+                     {% endfor %}
+                  <!-- </ul> for horizontal -->
+                  </div>
+            </li>
+                <li class="nav-item active dropdown">
+                  <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                      Hardware <i class="fas fa-server"></i>
+                      <span class="caret"></span>
+                  </a>
+                  <div class ="dropdown-menu" aria-labelledby="dropdown-target">
+                      <!-- <ul class="navbar-nav"> -->
+                        {% for i in hardware %}
+                          <a class="dropdown-item"> {{i.productname}}</a>
+                          <div class="dropdown-divider"></div>
+                         {% endfor %}
+                  <!-- </ul> for horizontal -->
+                  </div>
+                  </li>
+                  <li class="nav-item active dropdown">
+                    <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                        Beauty <i class="far fa-laugh-beam"></i>
+                        <span class="caret"></span>
+                    </a>
+                    <div class ="dropdown-menu" aria-labelledby="dropdown-target">
+                        <!-- <ul class="navbar-nav"> -->
+                          {% for i in beauty %}
+                            <a class="dropdown-item"> {{i.productname}}</a>
+                            <div class="dropdown-divider"></div>
+                           {% endfor %}
+                    <!-- </ul> for horizontal -->
+                    </div>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a style="color: white;padding-left:15px;font-size:20px;font-family: 'Andika New Basic', sans-serif;" href="#">
+                            Stationary <i class="fas fa-pencil-ruler"></i>
+                            <span class="caret"></span>
+                        </a>
+                        <div class ="dropdown-menu" aria-labelledby="dropdown-target">
+                            <!-- <ul class="navbar-nav"> -->
+                              {% for i in stationary %}
+                                <a class="dropdown-item"> {{i.productname}}</a>
+                                <div class="dropdown-divider"></div>
+                               {% endfor %}
+                        <!-- </ul> for horizontal -->
+                        </div>
+                        </li>   
+                            
+            
         </ul>
         <span class="navbar-text">
-        <a href="#"> CART <i class="fas fa-shopping-cart"></i></a>        
+        <a href="{% url 'cart' %}" style="color: white;padding-left:30px;font-size:25px;font-family: 'Andika New Basic', sans-serif;font-weight:bold;"> CART <i class="fas fa-shopping-cart"></i></a>        
         </span>
     </div>
     </div>
