@@ -58,5 +58,12 @@ def checkout(request,toal):
 def about(request):
     return render(request,'about.html',)
 
+def remove(request,id):
+    item=Product.objects.get(id=id)
+    global cart,total
+    total-=item.productprize
+    cart.remove(item)
+    return redirect('/cart')
+
 
 
