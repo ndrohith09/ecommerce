@@ -28,6 +28,7 @@ urlpatterns = [
     path('check/<toal>',views.checkout,name='checkput'),
     path('about/',views.about,name="about"),
     path('productpage/',views.productpage,name='productpage'),
+    path('/removefuckingitemfromcart/<int:id>',views.remove,name='remove'),
     
 ]
 
