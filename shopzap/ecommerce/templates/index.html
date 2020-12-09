@@ -19,7 +19,11 @@
 	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
 	<link rel="stylesheet" type="text/css" href="{%static 'styles/main_styles.css' %}">
 	<link rel="stylesheet" type="text/css" href="{%static 'styles/responsive.css' %}">
- 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Orbitron&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
+	
 	<link rel="icon"  href="{static'images/logo.png'}">
   
 </head>
@@ -36,13 +40,13 @@
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-								<div class="logo"><a href="{% url 'home' %}"><h1><b><i style="font-family: Georgia, 'Times New Roman', Times, serif;font-weight: bolder; font-size: 76px;">Shop ZAP</i></b></h1></a></div>
+								<div class="logo"><a href="{% url 'home' %}"><h1><b><i style="font-family: 'Changa', sans-serif;font-weight: bold; font-size: 86px;">Shop ZAP</i></b></h1></a></div>
 								<nav class="main_nav">
 									<ul class="d-flex flex-row align-items-start justify-content-start">
-										<li><a style="font-size: 28px;"  href="{% url 'home' %}">Home</a></li>	
-										<li><a style="font-size: 28px;"  href="{% url 'productpage' %}">More Products</a></li>			
-										<li><a style="font-size: 28px;"  href="{% url 'about' %}">About US</a></li>
-										<li><a style="font-size: 28px;"  href="{% url 'cart' %}">Cart</a></li>
+										<li><a style="font-size: 28px;font-family: 'Yanone Kaffeesatz', sans-serif;"  href="{% url 'home' %}">Home</a></li>	
+										<li><a style="font-size: 28px;font-family: 'Yanone Kaffeesatz', sans-serif;"  href="{% url 'productpage' %}">More Products</a></li>			
+										<li><a style="font-size: 28px;font-family: 'Yanone Kaffeesatz', sans-serif;"  href="{% url 'about' %}">About US</a></li>
+										<li><a style="font-size: 28px;font-family: 'Yanone Kaffeesatz', sans-serif;"  href="{% url 'cart' %}">Cart</a></li>
 										<!-- {% if user.is_authenticated %}							
 										<li>Hello, {{user.first_name}}</li>
 										 <li><a href="accounts/logout"></a></li> 
@@ -81,7 +85,7 @@
 
 		<div class="menu">
 			<div class="menu_header d-flex flex-row align-items-center justify-content-start">
-				<div class="menu_logo"><a href="index.html"><h1><b>Sop ZAP</b></h1></a></div>
+				<div class="menu_logo"><a href="index.html"><h1><b style="font-family: 'Changa', sans-serif;font-weight: bold; font-size: 86px;">Shop ZAP</b></h1></a></div>
 				<div class="menu_close_container ml-auto">
 					<div class="menu_close">
 						<div></div>
@@ -91,11 +95,11 @@
 			</div>
 			<div class="menu_content">
 				<ul>
-					<li><a href="{% url 'productpage' %}">Home</a></li>
-					<li><a href="{% url 'about' %}">About Us</a></li>
+					<li><a href="{% url 'productpage' %}" style="font-family: 'Yanone Kaffeesatz', sans-serif;">Home</a></li>
+					<li><a href="{% url 'about' %}"  style="font-family: 'Yanone Kaffeesatz', sans-serif;">About Us</a></li>
 					<!--<li><a href="#">Services</a></li>
 					<li><a href="Settings.html">News</a></li>-->
-					<li><a href="{% url 'cart' %}">Cart</a></li>
+					<li><a href="{% url 'cart' %}"  style="font-family: 'Yanone Kaffeesatz', sans-serif;">Cart</a></li>
 				</ul>
 			</div>
 			<div class="menu_social">
@@ -122,6 +126,25 @@
 					<!-- Slide -->
 					<div class="owl-item">
 						<div class="background_image"
+							style="background-image:url({% static 'images/sale2.png' %})"></div>
+						<div class="home_slider_content_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_slider_content">
+											<div class="home_title">
+												<h2></h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide -->
+					<div class="owl-item">
+						<div class="background_image"
 							style="background-image:url({% static 'images/sale4.png' %})"></div>
 						<div class="home_slider_content_container">
 							<div class="container">
@@ -138,24 +161,7 @@
 						</div>
 					</div>
 
-					<!-- Slide -->
-					<div class="owl-item">
-						<div class="background_image"
-							style="background-image:url({% static 'images/sale2.png' %})"></div>
-						<div class="home_slider_content_container">
-							<div class="container">
-								<div class="row">
-									<div class="col">
-										<div class="home_slider_content">
-											<div class="home_title">
-												<h2></h2>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 
 					<!-- Slide -->
 					<div class="owl-item">
