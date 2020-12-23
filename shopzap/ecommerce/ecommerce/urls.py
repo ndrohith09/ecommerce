@@ -18,6 +18,10 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from ehub import views
+
+from django.views.static import serve
+from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('<int:pk>/',views.detail , name='detail'),
@@ -28,8 +32,9 @@ urlpatterns = [
     path('check/<toal>',views.checkout,name='checkput'),
     path('about/',views.about,name="about"),
     path('productpage/',views.productpage,name='productpage'),
-    path('/removefuckingitemfromcart/<int:id>',views.remove,name='remove'),
-    
+    path('/removeitemfromcart/<int:id>',views.remove,name='remove'),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
 
 
