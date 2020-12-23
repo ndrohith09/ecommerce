@@ -26,7 +26,7 @@ SECRET_KEY = 't(2he()2l4w-d+_s#w-*)0&*!cm4uhs=umko!s1e!!8cdp+@w+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1','shopzap.herokuapp.com']
 
 
 # Application definition
