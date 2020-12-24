@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 't(2he()2l4w-d+_s#w-*)0&*!cm4uhs=umko!s1e!!8cdp+@w+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','shopzap.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -79,10 +79,18 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': BASE_DIR / 'db.sqlite3',
+        #'NAME': 'db.sqlite3',
+        #'NAME': 'db.sqlite3',
 
-        "ENGINE" : 'djongo',
-        'NAME':'shopzap'
+        #"ENGINE" : 'djongo',
+        #'NAME':'shopzap'
+
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'shopzap',
+        'USER':'postgres',
+        'PASSWORD' : '2002',
+        "HOST":"localhost",
+
     }
 }
 

@@ -32,9 +32,8 @@ urlpatterns = [
     path('check/<toal>',views.checkout,name='checkput'),
     path('about/',views.about,name="about"),
     path('productpage/',views.productpage,name='productpage'),
-    path('/removeitemfromcart/<int:id>',views.remove,name='remove'),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    path('removeitemfromcart/<int:id>',views.remove,name='remove'),
+   
 ]
 
 
